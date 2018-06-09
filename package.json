@@ -1,6 +1,6 @@
 {
   "name": "quick-encrypt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easily generate RSA Public-Private Keypairs and use them for secure asymmetric one-way encryption and decryption!",
   "main": "index.js",
   "scripts": {
@@ -25,5 +25,19 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "mocha": "^5.2.0"
-  }
+  },
+  "keywords": [
+    "crypto",
+    "encrypt",
+    "decrypt",
+    "encryption",
+    "decryption",
+    "cipher",
+    "aes-256",
+    "aes256",
+    "rsa",
+    "asymmetric",
+    "aes",
+    "quick-encrypt"
+  ]
 }
