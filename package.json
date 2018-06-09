@@ -1,0 +1,29 @@
+{
+  "name": "quick-encrypt",
+  "version": "1.0.0",
+  "description": "Easily generate RSA Public-Private Keypairs and use them for secure asymmetric one-way encryption and decryption!",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "engines": {
+    "node": ">=8.11.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuaquek/QuickEncrypt.git"
+  },
+  "author": "Joshua Quek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshuaquek/QuickEncrypt/issues"
+  },
+  "homepage": "https://github.com/joshuaquek/QuickEncrypt#readme",
+  "dependencies": {
+    "keypair": "1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
