@@ -35,9 +35,11 @@ Encrypting a secret payload:
 
 ```javascript
 
-let encryptedText = QuickEncrypt.encrypt( 'This is some super top secret text!', 'The public key here!')
+let publicKey = keys.public // " -----BEGIN RSA PUBLIC KEY-----\nMIGJAoGBAIXlXZs+0FoIGBc5pjnZZxtvIzdDFtNi3SVi6vf2J...... "
 
-console.log(encryptedText) // Some encrypted text: '01c066e00c660aabadfc320621d9c3ac25ccf2e4c29e8bf4c......'
+let encryptedText = QuickEncrypt.encrypt( 'This is some super top secret text!', publicKey)
+
+console.log(encryptedText) // Some encrypted text: " 01c066e00c660aabadfc320621d9c3ac25ccf2e4c29e8bf4c...... "
 
 ```
 
@@ -45,9 +47,11 @@ Decrypting a secret payload:
 
 ```javascript
 
-let decryptedText = QuickEncrypt.decrypt( 'The encrypted text string here!', 'The private key here!')
+let privateKey = keys.private // " -----BEGIN RSA PRIVATE KEY-----\nMIICWwIBAAKBgQCF5V2bPtBaCBgXOaY52WcbbyM3QxbTYt0lYur..... "
 
-console.log(decryptedText) // The decrypted text: 'This is some super top secret text!'
+let decryptedText = QuickEncrypt.decrypt( 'The encrypted text string here!', privateKey)
+
+console.log(decryptedText) // The decrypted text: "This is some super top secret text!"
 
 ```
 
@@ -57,18 +61,18 @@ Full Example:
 const QuickEncrypt = require('quick-encrypt')
 
 // --- RSA Keypair Generation ---
-let keys = QuickEncrypt.generate(1024)
-console.log(keys) // This 
+let keys = QuickEncrypt.generate(1024) // Use either 2048 bits or 1024 bits.
+console.log(keys) // Generated Public Key and Private Key pair
+let publicKey = keys.public
+let privateKey = keys.private
 
 // --- Encrypt using public key ---
-let publicKey = keys.public
 let encryptedText = QuickEncrypt.encrypt( "This is some super top secret text!", publicKey )
-console.log(encryptedText) // This will print out the ENCRYPTED text 
+console.log(encryptedText) // This will print out the ENCRYPTED text, for example : " 01c066e00c660aabadfc320621d9c3ac25ccf2e4c29e8bf4c...... "
 
 // --- Decrypt using private key ---
-let privateKey = keys.private
 let decryptedText = QuickEncrypt.decrypt( encryptedText, privateKey)
-console.log(decryptedText) // This will print out the DECRYPTED text, which is "This is some super top secret text!"
+console.log(decryptedText) // This will print out the DECRYPTED text, which is " This is some super top secret text! "
 
 ```
 
