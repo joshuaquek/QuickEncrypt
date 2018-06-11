@@ -32,7 +32,7 @@ Encrypting a secret payload:
 
 ```javascript
 
-let encryptedText = QuickEncrypt( 'This is some super top secret text!', 'The public key here!')
+let encryptedText = QuickEncrypt.encrypt( 'This is some super top secret text!', 'The public key here!')
 
 console.log(encryptedText) // Some encrypted text: '01c066e00c660aabadfc320621d9c3ac25ccf2e4c29e8bf4c......'
 
@@ -42,7 +42,7 @@ Decrypting a secret payload:
 
 ```javascript
 
-let decryptedText = QuickEncrypt( 'The encrypted text string here!', 'The private key here!')
+let decryptedText = QuickEncrypt.decrypt( 'The encrypted text string here!', 'The private key here!')
 
 console.log(decryptedText) // The decrypted text: 'This is some super top secret text!'
 
@@ -54,17 +54,17 @@ Full Example:
 const QuickEncrypt = require('quick-encrypt')
 
 // --- RSA Keypair Generation ---
-let keys = generate(1024)
+let keys = QuickEncrypt.generate(1024)
 console.log(keys) // This 
 
 // --- Encrypt using public key ---
 let publicKey = keys.public
-let encryptedText = encrypt( "This is some super top secret text!", publicKey )
+let encryptedText = QuickEncrypt.encrypt( "This is some super top secret text!", publicKey )
 console.log(encryptedText) // This will print out the ENCRYPTED text 
 
 // --- Decrypt using private key ---
 let privateKey = keys.private
-let decryptedText = decrypt( encryptedText, privateKey)
+let decryptedText = QuickEncrypt.decrypt( encryptedText, privateKey)
 console.log(decryptedText) // This will print out the DECRYPTED text, which is "This is some super top secret text!"
 
 ```
