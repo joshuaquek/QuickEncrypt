@@ -1,6 +1,6 @@
-# ⚡️🔐 Quick Encrypt
+# ⚡️🔐 QuickEncrypt
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/joshuaquek/QuickEncrypt/graphs/commit-activity)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
 Easily generate RSA Public-Private Keypairs and use them for secure asymmetric one-way encryption and decryption!
