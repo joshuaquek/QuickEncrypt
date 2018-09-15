@@ -4,7 +4,34 @@ const { generate, encrypt, decrypt } = require('../index')
 
 const message = 'This is some super top secret text!'
 
-test('QuickEncrypt tests', function(t) {
+test('Error cases', function(t) {
+  // Need to add in a test for if encrypt/decrypt throw errors
+  t.plan(3)
+
+  t.test('Keypair generation', function(t) {
+    t.plan(2)
+
+    t.throws(function () { generate(4096) }, 'Key must be either 1024 or 2048')
+    t.throws(function () { generate('4096') }, 'Key cannot be a string')
+  })
+
+  t.test('Encryption', function(t) {
+    t.plan(2)
+
+    t.throws(function () { encrypt(4096, 'Public key') }, 'Message cannot be a number')
+    t.throws(function () { encrypt('message', 2048) }, 'Key cannot be a number')
+  })
+
+  t.test('Decryption', function(t) {
+    t.plan(2)
+
+    t.throws(function () { decrypt(4096, 'Public key') }, 'Message cannot be a number')
+    t.throws(function () { decrypt('message', 2048) }, 'Key cannot be a number')
+  })
+
+})
+
+test('RSA keypair tests', function(t) {
   const keys = generate(1024)
 
   t.test('Keypair Generation', function (t) {
