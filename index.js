@@ -2,7 +2,7 @@ const crypto = require('crypto');
 const keypair = require('keypair')
 
 exports.generate = ( sizeInBits ) => {
-  if( !(typeof sizeInBits==='number' && (sizeInBits%1)===0 && (sizeInBits == 1024 || sizeInBits == 2048)) ) throw Error("Error generating public and private key. Key size can only be 1024 or 2048. Example usage: ` let keys = QuickEncrypt.generate(2048); `");
+  if( !(sizeInBits === 1024 || sizeInBits === 2048) ) throw Error("Error generating public and private key. Key size can only be 1024 or 2048. Example usage: ` let keys = QuickEncrypt.generate(2048); `");
   return keypair( { bits: sizeInBits } )
 }
 
