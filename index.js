@@ -1,6 +1,8 @@
 const crypto = require('crypto');
 const keypair = require('keypair')
 
+const unknownError = (case) => new Error(`Something went wrong during ${case}`);
+
 exports.generate = ( sizeInBits ) => {
   if( !(typeof sizeInBits==='number' && (sizeInBits%1)===0 && (sizeInBits == 1024 || sizeInBits == 2048)) ) throw Error("Error generating public and private key. Key size can only be 1024 or 2048. Example usage: ` let keys = QuickEncrypt.generate(2048); `");
   return keypair( { bits: sizeInBits } )
@@ -11,7 +13,7 @@ exports.encrypt = ( payloadString, publicKey ) => {
   try{
     return crypto.publicEncrypt( publicKey, Buffer.from( payloadString, 'utf8' ) ).toString('hex')
   }catch( error ){
-    console.log( error )
+    throw unknownError('encryption')
   }
 }
 
@@ -20,6 +22,6 @@ exports.decrypt = ( encryptedString, privateKey ) => {
   try{
     return crypto.privateDecrypt({key: privateKey}, Buffer.from( encryptedString, 'hex' )).toString()
   }catch( error ){
-    console.log( error )
+    throw unknownError('decryption')
   }
 }
