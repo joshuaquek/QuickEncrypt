@@ -4,7 +4,8 @@
   "description": "Easily generate RSA Public-Private Keypairs and use them for secure asymmetric one-way encryption and decryption!",
   "main": "index.js",
   "scripts": {
-    "test": "node ./test/test.js"
+    "test": "node ./test/test.js",
+    "test:coverage": "istanbul cover tape ./test/test.js"
   },
   "engines": {
     "node": ">=8.11.2"
@@ -24,7 +25,9 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "tape": "^4.9.1"
   },
   "keywords": [
     "crypto",

@@ -7,7 +7,7 @@ exports.generate = ( sizeInBits ) => {
 }
 
 exports.encrypt = ( payloadString, publicKey ) => {
-  if( !(typeof payloadString==='string' && typeof payloadString==='string') ) throw Error("Error encrypting. Payload and Public Key should be in text format. Example usage: ` let encryptedText = QuickEncrypt.encrypt('Some secret text here!', 'the public RSA key in text format here'); ` ");
+  if( !(typeof payloadString==='string' && typeof publicKey==='string') ) throw Error("Error encrypting. Payload and Public Key should be in text format. Example usage: ` let encryptedText = QuickEncrypt.encrypt('Some secret text here!', 'the public RSA key in text format here'); ` ");
   try{
     return crypto.publicEncrypt( publicKey, Buffer.from( payloadString, 'utf8' ) ).toString('hex')
   }catch( error ){
