@@ -1,7 +1,7 @@
 # ⚡️🔐 QuickEncrypt
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)]
-[![Coverage Status](https://coveralls.io/repos/github/joshuaquek/QuickEncrypt/badge.svg?branch=master)]
+[![Coverage Status](https://coveralls.io/repos/github/joshuaquek/QuickEncrypt/badge.svg?branch=master)
 [![Build Status](https://travis-ci.org/joshuaquek/QuickEncrypt.svg?branch=master)](https://travis-ci.org/joshuaquek/QuickEncrypt)
 (https://coveralls.io/github/joshuaquek/QuickEncrypt?branch=master)
 (https://github.com/joshuaquek/QuickEncrypt/graphs/commit-activity)
