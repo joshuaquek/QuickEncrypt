@@ -1,4 +1,5 @@
 const test = require('tape')
+const td = require('testdouble')
 
 const { generate, encrypt, decrypt } = require('../index')
 
@@ -6,7 +7,7 @@ const message = 'This is some super top secret text!'
 
 test('Error cases', function(t) {
   // Need to add in a test for if encrypt/decrypt throw errors
-  t.plan(3)
+  t.plan(4)
 
   t.test('Keypair generation', function(t) {
     t.plan(2)
@@ -29,6 +30,19 @@ test('Error cases', function(t) {
     t.throws(function () { decrypt('message', 2048) }, 'Key cannot be a number')
   })
 
+  t.test('crypto module errors', function(t) {
+    t.plan(2)
+
+    const crypto = td.replace('crypto');
+
+    td.when(crypto.publicEncrypt('message', 'Public Key')).thenThrow();
+    td.when(crypto.publicDecrypt('message', 'Public Key')).thenThrow();
+
+    t.throws(function () { encrypt('message', 'Public key') }, 'will catch on encrypt')
+    t.throws(function () { decrypt('message', 'Public key') }, 'will catch on decrypt')
+
+    td.reset();
+  })
 })
 
 test('RSA keypair tests', function(t) {
@@ -61,4 +75,3 @@ test('RSA keypair tests', function(t) {
     })
   })
 })
-
