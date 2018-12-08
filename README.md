@@ -1,13 +1,28 @@
-# ⚡️🔐 QuickEncrypt
-
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/joshuaquek/QuickEncrypt/graphs/commit-activity)
-[![Coverage Status](https://coveralls.io/repos/github/joshuaquek/QuickEncrypt/badge.svg?branch=master)](https://coveralls.io/github/joshuaquek/QuickEncrypt?branch=master)
-[![Build Status](https://travis-ci.org/joshuaquek/QuickEncrypt.svg?branch=master)](https://travis-ci.org/joshuaquek/QuickEncrypt)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![Greenkeeper badge](https://badges.greenkeeper.io/joshuaquek/QuickEncrypt.svg)](https://greenkeeper.io/)
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php) 
-
-Easily generate RSA Public-Private Keypairs and use them for secure asymmetric one-way encryption and decryption!
+<p align="center">
+  <img src="https://github.com/joshuaquek/github-readme-assets/blob/master/quickencrypt/logo.png?raw=true" height="150px">
+  <h2 align="center">⚡️🔐 QuickEncrypt</h2>
+  <p align="center">Easily generate RSA Public-Private Keypairs and use them for secure asymmetric one-way encryption and decryption!<p>
+  <p align="center">
+    <a href="https://github.com/joshuaquek/QuickEncrypt/graphs/commit-activity">
+      <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+    </a>
+    <a href="https://travis-ci.org/joshuaquek/QuickEncrypt">
+      <img src="https://travis-ci.org/joshuaquek/QuickEncrypt.svg?branch=master" />
+    </a>
+    <a href="https://coveralls.io/github/joshuaquek/QuickEncrypt?branch=master">
+      <img src="https://coveralls.io/repos/github/joshuaquek/QuickEncrypt/badge.svg?branch=master" />
+    </a>
+    <a href="https://standardjs.com">
+    	<img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg"/>
+    </a>
+    <a href="https://greenkeeper.io/">
+    	<img src="https://badges.greenkeeper.io/joshuaquek/QuickEncrypt.svg"/>
+    </a>
+    <a href="https://opensource.org/licenses/mit-license.php">
+	    <img src="https://badges.frapsoft.com/os/mit/mit.svg?v=103">
+    </a>
+  </p>
+</p>
 
 ## Installation
 
