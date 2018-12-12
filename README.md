@@ -18,6 +18,7 @@
     <a href="https://greenkeeper.io/">
     	<img src="https://badges.greenkeeper.io/joshuaquek/QuickEncrypt.svg"/>
     </a>
+    <a href="https://snyk.io/test/github/joshuaquek/QuickEncrypt?targetFile=package.json"><img src="https://snyk.io/test/github/joshuaquek/QuickEncrypt/badge.svg?targetFile=package.json" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/joshuaquek/QuickEncrypt?targetFile=package.json" style="max-width:100%;"></a>
     <a href="https://opensource.org/licenses/mit-license.php">
 	    <img src="https://badges.frapsoft.com/os/mit/mit.svg?v=103">
     </a>
